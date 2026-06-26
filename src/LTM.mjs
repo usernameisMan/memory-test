@@ -16,3 +16,12 @@ const model = new ChatOpenAI({
     baseURL: process.env.OPENAI_BASE_URL,
   },
 });
+
+async function fileHistoryDemo() {
+  const filePath = path.join(process.cwd(), "chat_history.json");
+  const sessionId = "user_session_001"; // 系统提示词
+
+  const systemMessage = new SystemMessage(
+    "你是一个友好的做菜助手，喜欢分享美食和烹饪技巧。",
+  );
+}
